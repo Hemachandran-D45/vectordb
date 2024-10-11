@@ -1,0 +1,47 @@
+Vector database is a database used for storing high dimentional vector such as word embedding or image embedding
+from high dimensional data like doc,jpeg,pdf to high dimensional vector the store in vector db
+
+Why we need Vector DR
+Over 80 to 85% data out there is unstructured data and we cant easily store them into a Relational or Traditonal database( MySql, Postgre SQL, Sqlite)
+Cuz Rigit in Schema ( row and tabel), Scalability challenges (cant able to handle large volume of unstructure data), complexity in retrieval and process and we can do thatbut this is hard idea.
+images is nothing but pixel and relational database doesn't know how to query out similar kind of image.
+due to this database like NoSql used, they offer greater flexibility,scalability, and efficiency in handling unstructured data.
+
+To overcome this issue, Concept introduce Vector embedding
+When we have unstructure data like video,audio,text we need to apply embedding model
+Embedding model is nothing but neural network model(deep learning model) and it is vector representation of object , a sentence any input
+(basically embedding is converting object to number )
+Using this embedding model , first we generating the embedding like a VECTOR 
+
+Set of Object -----> Embedding Model ----------> Object as Vector
+Text ----> Embedding Model(openai model) --------> Vector Embedding ------> Vector Storage(Database)
+These kind of vector embedding has function called similar search 
+
+Embedding Models:
+	Open AI Embedding ---> GPT model
+	Hugging Face Embedding ----> Opensource LLM
+	Llama2 Embedding ---> Facebook
+	Google Palm Embedding ---> GOogel
+
+
+Issue :
+	Whenever we search an similar vector ,It use distance formula but it took time cuz it calculate one by one all the vector
+So main problem is time , To over come this issue they introduce indexes 
+
+Vector Indexes:
+	Whenever having kind of unstructure data where applying embedding model and generate kind of embedding vector
+So on the top this embedding it is trying to add index. Index is data structure to find out similar kind of high dimensional data,
+enabling fast similarity searches and nearest neighbor queries.
+A Vector database indexes and store vector embedding for faster retrieval and similarity search.
+
+Use cases of Vector DB:
+1) Long Term memory for LLMs
+2) Semantic Search : Search based on the meaning of context
+3) Similarity Search: Text, Images, Videos, Audios
+4) Recommmendation engine as well
+
+Some widely used vector DB:
+	Chromadb, FAISS(scalable search with facebook AI) - Local DB
+	Weaviate,PineCone, redis - Cloud Based
+
+
