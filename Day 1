@@ -1,14 +1,17 @@
-Vector database is a database used for storing high dimentional vector such as word embedding or image embedding
+Vector DB:
+
+	Vector database is a database used for storing high dimentional vector such as word embedding or image embedding
 from high dimensional data like doc,jpeg,pdf to high dimensional vector the store in vector db
 
-Why we need Vector DR
-Over 80 to 85% data out there is unstructured data and we cant easily store them into a Relational or Traditonal database( MySql, Postgre SQL, Sqlite)
+Why we need Vector DB?
+
+	Over 80 to 85% data out there is unstructured data and we cant easily store them into a Relational or Traditonal database( MySql, Postgre SQL, Sqlite)
 Cuz Rigit in Schema ( row and tabel), Scalability challenges (cant able to handle large volume of unstructure data), complexity in retrieval and process and we can do thatbut this is hard idea.
 images is nothing but pixel and relational database doesn't know how to query out similar kind of image.
 due to this database like NoSql used, they offer greater flexibility,scalability, and efficiency in handling unstructured data.
 
 To overcome this issue, Concept introduce Vector embedding
-When we have unstructure data like video,audio,text we need to apply embedding model
+	When we have unstructure data like video,audio,text we need to apply embedding model
 Embedding model is nothing but neural network model(deep learning model) and it is vector representation of object , a sentence any input
 (basically embedding is converting object to number )
 Using this embedding model , first we generating the embedding like a VECTOR 
