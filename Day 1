@@ -1,0 +1,44 @@
+Why we learning Vector db?
+we need fast response in the any aspect.
+fast response
+storage of huge data
+fault toreant (connect several device)
+
+RDBMS VS  Vector db
+made for or purpose - 
+RDBMS : Enabling Transactional data storage and processing
+Vector : AI/Ml model 
+
+data storage - 
+RDBMS : in the form of Row and column 
+Vector: in Vectors 
+
+indexing - 
+RDBMS: Index 
+Vector: Hashing, Quantization
+
+query - sql 
+Vector : Matching technique, Cosine,
+
+Embedding : vector representation of word , a sentence any input
+(basically embedding is converting word to number )
+
+
+embedding model + input create a vector and stored in vector db
+
+Use case
+Recommendation engine
+semantic search 
+advance chatbot
+context match
+
+
+
+Chromadb
+
+import the chromadb
+create a client and using client create collection with create_collection() method
+collection is where we store set of vector embedding(collection of data)
+then store data on by using add method in the form of
+document(list),metadata(list of dic),ids
+finally try to get the result using query
