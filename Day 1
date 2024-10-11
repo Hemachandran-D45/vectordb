@@ -1,44 +1,47 @@
-Why we learning Vector db?
-we need fast response in the any aspect.
-fast response
-storage of huge data
-fault toreant (connect several device)
+Vector database is a database used for storing high dimentional vector such as word embedding or image embedding
+from high dimensional data like doc,jpeg,pdf to high dimensional vector the store in vector db
 
-RDBMS VS  Vector db
-made for or purpose - 
-RDBMS : Enabling Transactional data storage and processing
-Vector : AI/Ml model 
+Why we need Vector DR
+Over 80 to 85% data out there is unstructured data and we cant easily store them into a Relational or Traditonal database( MySql, Postgre SQL, Sqlite)
+Cuz Rigit in Schema ( row and tabel), Scalability challenges (cant able to handle large volume of unstructure data), complexity in retrieval and process and we can do thatbut this is hard idea.
+images is nothing but pixel and relational database doesn't know how to query out similar kind of image.
+due to this database like NoSql used, they offer greater flexibility,scalability, and efficiency in handling unstructured data.
 
-data storage - 
-RDBMS : in the form of Row and column 
-Vector: in Vectors 
+To overcome this issue, Concept introduce Vector embedding
+When we have unstructure data like video,audio,text we need to apply embedding model
+Embedding model is nothing but neural network model(deep learning model) and it is vector representation of object , a sentence any input
+(basically embedding is converting object to number )
+Using this embedding model , first we generating the embedding like a VECTOR 
 
-indexing - 
-RDBMS: Index 
-Vector: Hashing, Quantization
+Set of Object -----> Embedding Model ----------> Object as Vector
+Text ----> Embedding Model(openai model) --------> Vector Embedding ------> Vector Storage(Database)
+These kind of vector embedding has function called similar search 
 
-query - sql 
-Vector : Matching technique, Cosine,
-
-Embedding : vector representation of word , a sentence any input
-(basically embedding is converting word to number )
-
-
-embedding model + input create a vector and stored in vector db
-
-Use case
-Recommendation engine
-semantic search 
-advance chatbot
-context match
+Embedding Models:
+	Open AI Embedding ---> GPT model
+	Hugging Face Embedding ----> Opensource LLM
+	Llama2 Embedding ---> Facebook
+	Google Palm Embedding ---> GOogel
 
 
+Issue :
+	Whenever we search an similar vector ,It use distance formula but it took time cuz it calculate one by one all the vector
+So main problem is time , To over come this issue they introduce indexes 
 
-Chromadb
+Vector Indexes:
+	Whenever having kind of unstructure data where applying embedding model and generate kind of embedding vector
+So on the top this embedding it is trying to add index. Index is data structure to find out similar kind of high dimensional data,
+enabling fast similarity searches and nearest neighbor queries.
+A Vector database indexes and store vector embedding for faster retrieval and similarity search.
 
-import the chromadb
-create a client and using client create collection with create_collection() method
-collection is where we store set of vector embedding(collection of data)
-then store data on by using add method in the form of
-document(list),metadata(list of dic),ids
-finally try to get the result using query
+Use cases of Vector DB:
+1) Long Term memory for LLMs
+2) Semantic Search : Search based on the meaning of context
+3) Similarity Search: Text, Images, Videos, Audios
+4) Recommmendation engine as well
+
+Some widely used vector DB:
+	Chromadb, FAISS(scalable search with facebook AI) - Local DB
+	Weaviate,PineCone, redis - Cloud Based
+
+
